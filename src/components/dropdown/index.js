@@ -159,7 +159,7 @@ export default class Dropdown extends PureComponent {
   }
 
   // componentWillMount() {
-    
+
   // }
 
   componentDidMount() {
@@ -302,6 +302,7 @@ export default class Dropdown extends PureComponent {
           Animated.timing(opacity, {
             duration: animationDuration,
             toValue: 1,
+            useNativeDriver: true,
           }).start(() => {
             if (this.mounted && 'ios' === Platform.OS) {
               let { flashScrollIndicators } = this.scroll || {};
@@ -323,6 +324,7 @@ export default class Dropdown extends PureComponent {
     Animated.timing(opacity, {
       duration: animationDuration,
       toValue: 0,
+      useNativeDriver: true,
     }).start(() => {
       this.focused = false;
 
