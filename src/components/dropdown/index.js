@@ -431,7 +431,7 @@ export default class Dropdown extends PureComponent {
 
     let title = null == label || 'string' === typeof label ? label : String(label);
 
-    return <TextField ref={this.txRef} {...props} editable={false} onChangeText={undefined} renderRightAccessory={renderAccessory} />;
+    return <TextField ref={this.txRef} {...props} editable={false} onChangeText={undefined} renderRightAccessory={renderAccessory}   lineWidth={0} />;
   }
 
   renderRipple() {
